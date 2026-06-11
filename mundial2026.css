@@ -3,12 +3,12 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-    --bg:#0a0e1a;
-    --surface:#111827;
-    --surface2:#1a2235;
-    --border:#1f2d47;
-    --text:#f0f4ff;
-    --muted:#6b7a99;
+    --bg:#f5f3ee;
+    --surface:#ffffff;
+    --surface2:#eeeae3;
+    --border:#d4cfc6;
+    --text:#1a1714;
+    --muted:#8a8277;
     --spain:#e63946;
     --morocco:#2d9a5f;
     --big:#f4a427;
@@ -30,7 +30,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);min-height:100
 
 .sticky-bar{
     position:sticky;top:0;z-index:20;
-    background:rgba(10,14,26,.93);
+    background:rgba(245,243,238,.95);
     backdrop-filter:blur(14px);
     border-bottom:1px solid var(--border);
     padding:.6rem 1.25rem;
@@ -128,7 +128,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);min-height:100
     border-radius:6px;min-height:110px;padding:6px;
     position:relative;transition:background .1s;
 }
-.cal-cell:hover{background:var(--surface2)}
+.cal-cell:hover{background:#e8e4dc}
 .cal-cell.empty{background:transparent;border-color:transparent}
 
 .cday{font-size:11px;font-weight:600;color:var(--muted);margin-bottom:4px;display:block}
@@ -142,7 +142,7 @@ body{font-family:var(--fb);background:var(--bg);color:var(--text);min-height:100
     cursor:default;transition:opacity .15s;
 }
 .pill.js-hidden{display:none!important}
-.pill-other{background:var(--surface2);border-color:var(--border);color:var(--muted)}
+.pill-other{background:var(--surface2);border-color:var(--border);color:#7a756e}
 .pill-spain{background:var(--spain-dim);border-color:rgba(230,57,70,.35);color:#ff8590}
 .pill-morocco{background:var(--morocco-dim);border-color:rgba(45,154,95,.35);color:#5dd99a}
 .pill-big{background:var(--big-dim);border-color:rgba(244,164,39,.35);color:#ffc55e}

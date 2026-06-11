@@ -23,11 +23,11 @@
 
 <div class="sticky-bar">
     <div class="bar-inner">
-        <span class="filter-label">Ver:</span>
+        <span class="filter-label">Filtrar:</span>
         <button class="btn-filter f-all" onclick="setFilter('all',this)">Todos</button>
         <button class="btn-filter" onclick="setFilter('spain',this)">🇪🇸 España</button>
         <button class="btn-filter" onclick="setFilter('morocco',this)">🇲🇦 Marruecos</button>
-        <button class="btn-filter" onclick="setFilter('big',this)">🔥 Grandes</button>
+        <button class="btn-filter" onclick="setFilter('big',this)">🔥 Relevantes</button>
         <div class="view-toggle">
             <button class="vt-btn vt-active" id="btn-list" onclick="setView('list')">
                 <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
@@ -78,6 +78,11 @@
                     <div class="mbadges"><span class="badge bg">Gr. D</span></div>
                 </div>
                 <div class="match-row" data-tags="other">
+                    <div class="mtime">05:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Australia vs Turquía</span><span class="venue">BC Place · Vancouver</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. D</span></div>
+                </div>
+                <div class="match-row" data-tags="other">
                     <div class="mtime">20:00<small>Canarias</small></div>
                     <div class="mteams"><span class="teams">Catar vs Suiza</span><span class="venue">Levi's Stadium · Santa Clara</span></div>
                     <div class="mbadges"><span class="badge bg">Gr. B</span></div>
@@ -86,11 +91,6 @@
 
             <div class="day-section">
                 <p class="day-label">Domingo 14 de junio</p>
-                <div class="match-row" data-tags="other">
-                    <div class="mtime">05:00<small>Canarias</small></div>
-                    <div class="mteams"><span class="teams">Australia vs repechaje europeo</span><span class="venue">BC Place · Vancouver</span></div>
-                    <div class="mbadges"><span class="badge bg">Gr. D</span></div>
-                </div>
                 <div class="match-row is-morocco" data-tags="morocco big">
                     <div class="mtime">23:00<small>Canarias</small></div>
                     <div class="mteams"><span class="teams"><strong>Brasil</strong> vs <strong>Marruecos</strong> 🔥</span><span class="venue">MetLife Stadium · East Rutherford</span></div>
@@ -195,7 +195,7 @@
                 <p class="day-label">Lunes 22 de junio</p>
                 <div class="match-row is-big" data-tags="big">
                     <div class="mtime">22:00<small>Canarias</small></div>
-                    <div class="mteams"><span class="teams"><strong>Francia</strong> vs Irak/repechaje</span><span class="venue">Lincoln Financial Field · Filadelfia</span></div>
+                    <div class="mteams"><span class="teams"><strong>Francia</strong> vs Irak</span><span class="venue">Lincoln Financial Field · Filadelfia</span></div>
                     <div class="mbadges"><span class="badge bg">Gr. I</span></div>
                 </div>
             </div>
@@ -293,13 +293,13 @@
                     <div class="cal-cell has-match"><span class="cday">13</span>
                         <div class="cpills">
                             <div class="pill pill-other" data-tags="other"><span class="ptime">02h</span><span class="pteams">EE.UU. vs Paraguay</span></div>
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">05h</span><span class="pteams">Australia vs Turquía</span></div>
                             <div class="pill pill-other" data-tags="other"><span class="ptime">20h</span><span class="pteams">Catar vs Suiza</span></div>
                         </div>
                     </div>
 
                     <div class="cal-cell has-match"><span class="cday">14</span>
                         <div class="cpills">
-                            <div class="pill pill-other" data-tags="other"><span class="ptime">05h</span><span class="pteams">Australia vs rep.</span></div>
                             <div class="pill pill-morocco" data-tags="morocco big"><span class="ptime">23h</span><span class="pteams">🇲🇦 Brasil vs Marruecos</span></div>
                         </div>
                     </div>
