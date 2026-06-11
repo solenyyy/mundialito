@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial 2026 · Horario Canarias</title>
+    <link rel="stylesheet" href="mundial2026.css">
+</head>
+<body>
+
+<div class="hero">
+    <p class="eyebrow">FIFA World Cup 2026 · Fase de grupos</p>
+    <h1>Mundial <span>2026</span></h1>
+    <p class="hero-sub">Horario de Canarias (UTC+1 en verano) · Partidos destacados</p>
+</div>
+
+<div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:#e63946"></div>España</div>
+    <div class="leg"><div class="leg-dot" style="background:#2d9a5f"></div>Marruecos</div>
+    <div class="leg"><div class="leg-dot" style="background:#f4a427"></div>Partido grande</div>
+    <div class="leg"><div class="leg-dot" style="background:#6b7a99"></div>Otros</div>
+</div>
+
+<div class="sticky-bar">
+    <div class="bar-inner">
+        <span class="filter-label">Ver:</span>
+        <button class="btn-filter f-all" onclick="setFilter('all',this)">Todos</button>
+        <button class="btn-filter" onclick="setFilter('spain',this)">🇪🇸 España</button>
+        <button class="btn-filter" onclick="setFilter('morocco',this)">🇲🇦 Marruecos</button>
+        <button class="btn-filter" onclick="setFilter('big',this)">🔥 Grandes</button>
+        <div class="view-toggle">
+            <button class="vt-btn vt-active" id="btn-list" onclick="setView('list')">
+                <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                Lista
+            </button>
+            <button class="vt-btn" id="btn-cal" onclick="setView('cal')">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Calendario
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="views">
+
+
+    <div class="view active" id="view-list">
+        <div class="list-days">
+
+            <div class="day-section">
+                <p class="day-label">Miércoles 11 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>México</strong> vs Sudáfrica</span><span class="venue">Estadio Azteca · Ciudad de México</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. A</span><span class="badge bb">Inaugural</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Jueves 12 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">03:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Corea del Sur vs Rep. Checa</span><span class="venue">Estadio Akron · Zapopan</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. A</span></div>
+                </div>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Canadá</strong> vs Bosnia</span><span class="venue">BMO Field · Toronto</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. B</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Viernes 13 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">02:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>EE.UU.</strong> vs Paraguay</span><span class="venue">SoFi Stadium · Inglewood, CA</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. D</span></div>
+                </div>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Catar vs Suiza</span><span class="venue">Levi's Stadium · Santa Clara</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. B</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Sábado 14 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">05:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Australia vs repechaje europeo</span><span class="venue">BC Place · Vancouver</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. D</span></div>
+                </div>
+                <div class="match-row is-morocco" data-tags="morocco big">
+                    <div class="mtime">23:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Brasil</strong> vs <strong>Marruecos</strong> 🔥</span><span class="venue">MetLife Stadium · East Rutherford</span></div>
+                    <div class="mbadges"><span class="badge bm">Marruecos</span><span class="badge bb">Partidazo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Domingo 15 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">02:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Haití vs Escocia</span><span class="venue">Gillette Stadium · Foxborough</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. C</span></div>
+                </div>
+                <div class="match-row is-spain" data-tags="spain">
+                    <div class="mtime">17:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>España</strong> vs Cabo Verde</span><span class="venue">Mercedes-Benz Stadium · Atlanta</span></div>
+                    <div class="mbadges"><span class="badge bs">España</span><span class="badge bg">Gr. H</span></div>
+                </div>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">18:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Alemania</strong> vs Curazao</span><span class="venue">NRG Stadium · Houston</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. E</span><span class="badge bb">Potencia</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Lunes 16 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">00:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Costa de Marfil vs Ecuador</span><span class="venue">Lincoln Financial Field · Filadelfia</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. E</span></div>
+                </div>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">21:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Países Bajos</strong> vs Japón</span><span class="venue">MetLife Stadium · East Rutherford</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. F</span><span class="badge bb">Partidazo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Martes 17 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">00:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Suecia vs Túnez</span><span class="venue">Lumen Field · Seattle</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. F</span></div>
+                </div>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Francia</strong> vs Senegal</span><span class="venue">MetLife Stadium · East Rutherford</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. I</span><span class="badge bb">Partidazo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Miércoles 18 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">02:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Argentina</strong> vs Argelia</span><span class="venue">Arrowhead Stadium · Kansas City</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. J</span><span class="badge bb">Partidazo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Jueves 19 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Portugal</strong> vs RD Congo</span><span class="venue">Lincoln Financial Field · Filadelfia</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. K</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Viernes 20 de junio</p>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">23:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Brasil vs Haití</span><span class="venue">Gillette Stadium · Foxborough</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. C</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Sábado 21 de junio</p>
+                <div class="match-row is-morocco" data-tags="morocco">
+                    <div class="mtime">02:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Escocia vs <strong>Marruecos</strong></span><span class="venue">Lincoln Financial Field · Filadelfia</span></div>
+                    <div class="mbadges"><span class="badge bm">Marruecos</span><span class="badge bg">Gr. C</span></div>
+                </div>
+                <div class="match-row is-spain" data-tags="spain">
+                    <div class="mtime">17:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>España</strong> vs Arabia Saudí</span><span class="venue">Mercedes-Benz Stadium · Atlanta</span></div>
+                    <div class="mbadges"><span class="badge bs">España</span><span class="badge bg">Gr. H</span></div>
+                </div>
+                <div class="match-row" data-tags="other">
+                    <div class="mtime">23:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams">Uruguay vs Cabo Verde</span><span class="venue">Hard Rock Stadium · Miami</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. H</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Domingo 22 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">22:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Francia</strong> vs Irak/repechaje</span><span class="venue">Lincoln Financial Field · Filadelfia</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. I</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Lunes 23 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Alemania</strong> vs Costa de Marfil</span><span class="venue">Allegiant Stadium · Las Vegas</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. E</span><span class="badge bb">Clave</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Martes 24 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">23:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Portugal</strong> vs Colombia</span><span class="venue">Hard Rock Stadium · Miami</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. K</span><span class="badge bb">Partidazo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Miércoles 25 de junio</p>
+                <div class="match-row is-morocco" data-tags="morocco">
+                    <div class="mtime">23:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Marruecos</strong> vs Haití · Escocia vs Brasil</span><span class="venue">Mercedes-Benz Stadium · Atlanta</span></div>
+                    <div class="mbadges"><span class="badge bm">Marruecos</span><span class="badge bb">Decide grupo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Jueves 26 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">20:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Francia</strong> vs Noruega · Senegal vs Irak</span><span class="venue">Gillette Stadium / BMO Field</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. I</span><span class="badge bb">Decide grupo</span></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <p class="day-label">Viernes 27 de junio</p>
+                <div class="match-row is-big" data-tags="big">
+                    <div class="mtime">01:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>Argentina</strong> vs Austria/Jordania</span><span class="venue">Allegiant Stadium · Las Vegas</span></div>
+                    <div class="mbadges"><span class="badge bg">Gr. J</span><span class="badge bb">Decide grupo</span></div>
+                </div>
+                <div class="match-row is-spain" data-tags="spain big">
+                    <div class="mtime">02:00<small>Canarias</small></div>
+                    <div class="mteams"><span class="teams"><strong>España</strong> vs <strong>Uruguay</strong> 🔥</span><span class="venue">Estadio Akron · Zapopan, Guadalajara</span></div>
+                    <div class="mbadges"><span class="badge bs">España</span><span class="badge bb">Decide grupo</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="view" id="view-cal">
+        <div class="cal-months">
+
+
+            <div class="month-block">
+                <div class="month-title">Junio 2026</div>
+                <div class="cal-grid">
+                    <div class="cal-dow">L</div><div class="cal-dow">M</div><div class="cal-dow">X</div>
+                    <div class="cal-dow">J</div><div class="cal-dow">V</div><div class="cal-dow">S</div><div class="cal-dow">D</div>
+
+
+                    <div class="cal-cell"><span class="cday">1</span></div>
+                    <div class="cal-cell"><span class="cday">2</span></div>
+                    <div class="cal-cell"><span class="cday">3</span></div>
+                    <div class="cal-cell"><span class="cday">4</span></div>
+                    <div class="cal-cell"><span class="cday">5</span></div>
+                    <div class="cal-cell"><span class="cday">6</span></div>
+                    <div class="cal-cell"><span class="cday">7</span></div>
+
+                    <div class="cal-cell"><span class="cday">8</span></div>
+                    <div class="cal-cell"><span class="cday">9</span></div>
+                    <div class="cal-cell"><span class="cday">10</span></div>
+
+                    <div class="cal-cell has-match"><span class="cday">11</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">20h</span><span class="pteams">México vs Sudáfrica</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">12</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">03h</span><span class="pteams">Corea S. vs Checa</span></div>
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">20h</span><span class="pteams">Canadá vs Bosnia</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">13</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">02h</span><span class="pteams">EE.UU. vs Paraguay</span></div>
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">20h</span><span class="pteams">Catar vs Suiza</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">14</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">05h</span><span class="pteams">Australia vs rep.</span></div>
+                            <div class="pill pill-morocco" data-tags="morocco big"><span class="ptime">23h</span><span class="pteams">🇲🇦 Brasil vs Marruecos</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">15</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">02h</span><span class="pteams">Haití vs Escocia</span></div>
+                            <div class="pill pill-spain" data-tags="spain"><span class="ptime">17h</span><span class="pteams">🇪🇸 España vs Cabo Verde</span></div>
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">18h</span><span class="pteams">Alemania vs Curazao</span></div>
+                        </div>
+                    </div>
+
+
+                    <div class="cal-cell has-match"><span class="cday">16</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">00h</span><span class="pteams">C.Marfil vs Ecuador</span></div>
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">21h</span><span class="pteams">P.Bajos vs Japón</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">17</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">00h</span><span class="pteams">Suecia vs Túnez</span></div>
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">20h</span><span class="pteams">Francia vs Senegal</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">18</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">02h</span><span class="pteams">Argentina vs Argelia</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">19</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">20h</span><span class="pteams">Portugal vs RD Congo</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">20</span>
+                        <div class="cpills">
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">23h</span><span class="pteams">Brasil vs Haití</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">21</span>
+                        <div class="cpills">
+                            <div class="pill pill-morocco" data-tags="morocco"><span class="ptime">02h</span><span class="pteams">🇲🇦 Escocia vs Marruecos</span></div>
+                            <div class="pill pill-spain" data-tags="spain"><span class="ptime">17h</span><span class="pteams">🇪🇸 España vs Arabia S.</span></div>
+                            <div class="pill pill-other" data-tags="other"><span class="ptime">23h</span><span class="pteams">Uruguay vs Cabo Verde</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">22</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">22h</span><span class="pteams">Francia vs Irak</span></div>
+                        </div>
+                    </div>
+
+
+                    <div class="cal-cell has-match"><span class="cday">23</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">20h</span><span class="pteams">Alemania vs C.Marfil</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">24</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">23h</span><span class="pteams">Portugal vs Colombia</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">25</span>
+                        <div class="cpills">
+                            <div class="pill pill-morocco" data-tags="morocco"><span class="ptime">23h</span><span class="pteams">🇲🇦 Marruecos vs Haití</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">26</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">20h</span><span class="pteams">Francia vs Noruega</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">27</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">01h</span><span class="pteams">Argentina vs Austria</span></div>
+                            <div class="pill pill-spain" data-tags="spain big"><span class="ptime">02h</span><span class="pteams">🇪🇸 España vs Uruguay 🔥</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell"><span class="cday">28</span></div>
+
+                    <div class="cal-cell"><span class="cday">29</span></div>
+
+
+                    <div class="cal-cell"><span class="cday">30</span></div>
+                    <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+                </div>
+            </div>
+
+
+            <div class="month-block">
+                <div class="month-title">Julio 2026 · Fase eliminatoria</div>
+                <div class="cal-grid">
+                    <div class="cal-dow">L</div><div class="cal-dow">M</div><div class="cal-dow">X</div>
+                    <div class="cal-dow">J</div><div class="cal-dow">V</div><div class="cal-dow">S</div><div class="cal-dow">D</div>
+
+
+                    <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+                    <div class="cal-cell"><span class="cday">1</span></div>
+
+                    <div class="cal-cell has-match"><span class="cday">2</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">—</span><span class="pteams">1/8 · Los Ángeles</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">3</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">—</span><span class="pteams">1/8 · Miami</span></div>
+                        </div>
+                    </div>
+                    <div class="cal-cell"><span class="cday">4</span></div>
+                    <div class="cal-cell"><span class="cday">5</span></div>
+
+
+                    <div class="cal-cell has-match"><span class="cday">6</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">—</span><span class="pteams">Octavos · Dallas</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell has-match"><span class="cday">7</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">—</span><span class="pteams">Octavos · Atlanta</span></div>
+                        </div>
+                    </div>
+                    <div class="cal-cell"><span class="cday">8</span></div>
+                    <div class="cal-cell"><span class="cday">9</span></div>
+
+                    <div class="cal-cell has-match"><span class="cday">10</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">—</span><span class="pteams">Cuartos · LA/KC</span></div>
+                        </div>
+                    </div>
+                    <div class="cal-cell"><span class="cday">11</span></div>
+                    <div class="cal-cell"><span class="cday">12</span></div>
+
+                    <div class="cal-cell"><span class="cday">13</span></div>
+
+                    <div class="cal-cell has-match"><span class="cday">14</span>
+                        <div class="cpills">
+                            <div class="pill pill-big" data-tags="big"><span class="ptime">—</span><span class="pteams">Semifinal · Dallas</span></div>
+                        </div>
+                    </div>
+                    <div class="cal-cell"><span class="cday">15</span></div>
+                    <div class="cal-cell"><span class="cday">16</span></div>
+                    <div class="cal-cell"><span class="cday">17</span></div>
+                    <div class="cal-cell"><span class="cday">18</span></div>
+
+                    <div class="cal-cell has-match"><span class="cday">19</span>
+                        <div class="cpills">
+                            <div class="pill pill-final" data-tags="big"><span class="ptime">21h</span><span class="pteams">🏆 FINAL · NJ</span></div>
+                        </div>
+                    </div>
+
+                    <div class="cal-cell"><span class="cday">20</span></div>
+                    <div class="cal-cell"><span class="cday">21</span></div>
+                    <div class="cal-cell"><span class="cday">22</span></div>
+                    <div class="cal-cell"><span class="cday">23</span></div>
+                    <div class="cal-cell"><span class="cday">24</span></div>
+                    <div class="cal-cell"><span class="cday">25</span></div>
+                    <div class="cal-cell"><span class="cday">26</span></div>
+                    <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+                    <div class="cal-cell empty"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="mundial2026.js"></script>
+</body>
+</html>
